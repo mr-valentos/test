@@ -1,0 +1,280 @@
+/* Camphor
+   -------------------------------------------------------------------------------------------- */
+/* Camphor Light */
+@font-face {
+  font-display: swap;
+  font-family: "Camphor";
+  font-weight: 300;
+  src: url("https://fonts.hlxcdn.com/fonts/camphor/CamphorStd-Light.woff");
+}
+/* Camphor Regular */
+@font-face {
+  font-display: swap;
+  font-family: "Camphor";
+  font-weight: 400;
+  src: url("https://fonts.hlxcdn.com/fonts/camphor/CamphorStd-Regular.woff");
+}
+/* Camphor Medium */
+@font-face {
+  font-display: swap;
+  font-family: "Camphor";
+  font-weight: 500;
+  src: url("https://fonts.hlxcdn.com/fonts/camphor/CamphorStd-Medium.woff");
+}
+/* Camphor Bold */
+@font-face {
+  font-display: swap;
+  font-family: "Camphor";
+  font-weight: 600;
+  src: url("https://fonts.hlxcdn.com/fonts/camphor/CamphorStd-Bold.woff");
+}
+/* Tiempos Headline
+   -------------------------------------------------------------------------------------------- */
+/* Tiempos Headline Regular */
+@font-face {
+  font-display: swap;
+  font-family: "TiemposHeadline";
+  font-weight: 400;
+  src: url("https://fonts.hlxcdn.com/fonts/tiempos-headline/TiemposHeadlineWeb-Regular.woff");
+}
+/* TT Norms
+   -------------------------------------------------------------------------------------------- */
+/* TT Norms Regular */
+@font-face {
+  font-display: swap;
+  font-family: "TTNorms";
+  font-weight: 400;
+  src: url("https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Regular.woff");
+}
+/* TT Norms Medium */
+@font-face {
+  font-display: swap;
+  font-family: "TTNorms";
+  font-weight: 500;
+  src: url("https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Medium.woff");
+}
+/* TT Norms Bold */
+@font-face {
+  font-display: swap;
+  font-family: "TTNorms";
+  font-weight: 700;
+  src: url("https://fonts.hlxcdn.com/fonts/tt-norms/TTNorms-Bold.woff");
+}
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+html {
+  font-family: "TTNorms", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F4F4F4;
+  padding: 60px 0 70px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 41px 0 78px;
+  }
+}
+.container__title {
+  width: 600px;
+  margin-bottom: 9px;
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.18;
+  color: #363636;
+}
+@media screen and (max-width: 768px) {
+  .container__title {
+    font-size: 28px;
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+.container__description {
+  width: 623px;
+  margin-bottom: 59px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  color: #383838;
+}
+@media screen and (max-width: 768px) {
+  .container__description {
+    font-size: 16px;
+    width: 100%;
+    padding: 0 30px;
+    margin-bottom: 38px;
+  }
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+}
+.slider__battons {
+  margin-bottom: 38px;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+}
+@media screen and (max-width: 768px) {
+  .slider__battons {
+    position: absolute;
+    bottom: -80px;
+  }
+}
+.slider__button {
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ababab;
+  transition: 0.3s color;
+}
+@media screen and (max-width: 992px) {
+  .slider__button {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slider__button {
+    font-size: 0;
+  }
+  .slider__button::before {
+    content: "o";
+    font-size: 20px;
+  }
+}
+.slider__button:not(:last-child) {
+  margin-right: 50px;
+}
+@media screen and (max-width: 768px) {
+  .slider__button:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.slider__button:hover {
+  cursor: pointer;
+  color: #4b94c6;
+}
+.slider__button--active {
+  color: #4b94c6;
+}
+.slider__slides {
+  display: flex;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 0 44px 10px #d8d8d8;
+  overflow: hidden;
+}
+.slider__slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-width: 100%;
+  padding: 50px;
+  background-color: white;
+  transition: 1s;
+}
+@media screen and (max-width: 768px) {
+  .slider__slide {
+    justify-content: center;
+    align-items: center;
+    padding: 22px 21px 33px;
+  }
+}
+.slider__text-content {
+  position: relative;
+  width: 372px;
+  margin-right: 40px;
+}
+@media screen and (max-width: 768px) {
+  .slider__text-content {
+    margin-right: 0;
+  }
+}
+.slider__text-content > h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.33;
+  color: #363636;
+}
+@media screen and (max-width: 768px) {
+  .slider__text-content > h1 {
+    margin-bottom: 280px;
+    text-align: center;
+  }
+}
+.slider__text-content > p {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.63;
+  color: #4e4e4e;
+}
+.slider__img {
+  object-fit: contain;
+  width: 40%;
+  max-height: 415px;
+  flex-shrink: 1;
+}
+@media screen and (max-width: 768px) {
+  .slider__img {
+    width: 200px;
+    position: absolute;
+    top: 100px;
+  }
+}
+
+.animation {
+  animation: moveDown 0.7s ease-out;
+}
+
+@keyframes moveDown {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-15%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

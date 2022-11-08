@@ -1,0 +1,133 @@
+.slider {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+
+
+  &__battons {
+    margin-bottom: 38px;
+
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+
+    @include phones {
+      position: absolute;
+      bottom: -80px;
+    }
+  }
+
+  &__button {
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ababab;
+    transition: 0.3s color;
+
+    @include tablets {
+      font-size: 14px;
+    }
+
+    @include phones {
+      font-size: 0;
+      &::before {
+        content: 'o';
+        font-size: 20px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 50px;
+      @include phones {
+        margin-right: 10px;
+        }
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: #4b94c6;
+    }
+
+    &--active {
+      color: #4b94c6;
+    }
+  }
+
+  &__slides {
+    display: flex;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 0 44px 10px #d8d8d8;
+    overflow: hidden;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-width: 100%;
+    padding: 50px;
+    background-color: white;
+   
+    transition: 1s;
+
+    @include phones {
+      justify-content: center;
+      align-items: center;
+      padding: 22px 21px 33px;
+    }
+  }
+
+  &__text-content {
+    position: relative;
+    width: 372px;
+    margin-right: 40px;
+
+    @include phones {
+      margin-right: 0;
+    }
+
+    > h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: 1.33;
+      color: #363636;
+
+      @include phones {
+        margin-bottom: 280px;
+        text-align: center;
+      }
+    }
+
+    > p {
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.63;
+      color: #4e4e4e;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    width: 40%;
+    max-height: 415px;
+    flex-shrink: 1;   
+    
+    @include phones {
+      width: 200px;
+      position: absolute;
+      top: 100px;
+    }
+  }
+}
